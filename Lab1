@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function showImage(n) {
+    document.getElementById("bigimg").src="logo"+n+".jpg";
+        }
+
+function addBorder(id) {
+  var x = document.getElementsByClassName("img");
+  for(i = 0; i < x.length; i++)
+  {
+      x.item(i).style.border = '5px solid black';
+  }
+  id.style.border = '5px solid red';
+}
+
+
+    </script>
+</head>
+<body>
+<img id="bigimg" src="logo1.jpg" border="5px" width="495" onclick="showImageNext()"  /><br>
+<img class="img" src="logo1.jpg" border="5px" width="121" onload="addBorder(this)" onclick="showImage(1);addBorder(this)"/>
+<img class="img" src="logo2.jpg" border="5px" width="91" onclick="showImage(2);addBorder(this)"/>
+<img class="img" src="logo3.jpg" border="5px" width="121" onclick="showImage(3);addBorder(this)"/>
+<img class="img" src="logo4.jpg" border="5px" width="121" onclick="showImage(4);addBorder(this)" />
+
+</body>
+</html>
